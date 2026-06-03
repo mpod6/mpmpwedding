@@ -1,5 +1,6 @@
-name = "mpmp.wedding"
-compatibility_date = "2025-10-19"
+name = "wedding-site"
+compatibility_date = "2026-06-03"
 
 [assets]
-directory = "public"
+directory = "./public"
+not_found_handling = "404-page"
