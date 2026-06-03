@@ -16,8 +16,8 @@ configuration:
     fontOrigin: googleFonts
     cdnCaching: true
     typography:
-      header: Cormorant Garamond
-      body: Lato
+      header: Estonia
+      body: Cormorant
       code: JetBrains Mono
     colors:
       lightMode:
