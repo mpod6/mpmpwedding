@@ -1,3 +1,5 @@
-name = "mpmp wedding"
+name = "mpmp.wedding"
 compatibility_date = "2025-10-19"
-pages_build_output_dir = "public"
+
+[assets]
+directory = "public"
