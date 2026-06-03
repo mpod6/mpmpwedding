@@ -1,6 +1,7 @@
 ---
-title: Welcome to Quartz
+title: Welcome to our Wedding page
+description: Homepage; welcome and details
 ---
+This website is under *heavy* construction, so please excuse the mess...
 
-This is a blank Quartz installation.
-See the [documentation](https://quartz.jzhao.xyz) for how to get started.
+We will be building this website, and its content, by hand-- including detaching as many functionalities from the platforms and services that scrape and sell your data. 
