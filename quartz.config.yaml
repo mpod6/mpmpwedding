@@ -1,9 +1,9 @@
-# yaml-language-server: $schema=./quartz/plugins/quartz-plugins.schema.json
+# yaml-language-server: $schema=./quartz/plugins/quartz-plugins.sche json
 configuration:
-  pageTitle: mpmp wedding test
-  pageTitleSuffix: "is this thing on"
+  pageTitle: Marisa & Max -- August 28, 2027
+  pageTitleSuffix: " | Marisa & Max's Wedding"
   enableSPA: true
-  enablePopovers: true
+  enablePopovers: false
   analytics:
     provider: plausible
   locale: en-US
@@ -17,27 +17,29 @@ configuration:
     cdnCaching: true
     typography:
       header: Cormorant Garamond
-      body: Source Sans Pro
-      code: IBM Plex Mono
+      body: Lato
+      code: JetBrains Mono
     colors:
       lightMode:
-        light: "#FAF7F2"      # ivory background
-        lightgray: "#E8E0D5"
-        gray: "#B8A99A"
-        darkgray: "#4A3F35"
-        dark: "#2C1F14"
-        secondary: "#C9A0A0"  # dusty rose for links
-        tertiary: "#7D9B76"   # sage for hover states
-        highlight: "#F5EFE8"
+        light: "#fdf8f4"      # warm off-white background
+        lightgray: "#e8ddd5"
+        gray: "#b09a8a"
+        darkgray: "#5c4a3e"
+        dark: "#2e1f17"
+        secondary: "#8b5e52"  # dusty rose for links
+        tertiary: "#c4956a"   # gold for hover states
+        highlight: "rgba(196,149,106,0.15)"
+        texthighlight: "#fce4d6"
       darkMode:
-        light: "#1A1512"
-        lightgray: "#2C2420"
-        gray: "#6B5B52"
-        darkgray: "#D4C8BE"
-        dark: "#FAF7F2"
-        secondary: "#C9A0A0"
-        tertiary: "#7D9B76"
-        highlight: "#2C2420"
+        light: "#1a1210"
+        lightgray: "#2e2018"
+        gray: "#7a5c50"
+        darkgray: "#c4a898"
+        dark: "#f5ece7"
+        secondary: "#d4897a"
+        tertiary: "#c4956a"
+        highlight: "rgba(196,149,106,0.1)"
+        texthighlight: "#5c2e20"
 plugins:
   - source: github:quartz-community/created-modified-date
     enabled: true

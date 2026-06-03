@@ -1,3 +1,38 @@
-@use "./variables.scss" as *;
+// custom.scss
 
-// put your custom CSS here!
+// Hide the explorer (folder tree) on all pages — you don't need it
+.left .explorer { display: none; }
+
+// Hide "last modified" date (optional — useful if pages don't change often)
+.meta { display: none; }
+
+// Full-width content on mobile
+@media (max-width: 768px) {
+  .page > #quartz-body { padding: 0 1rem; }
+}
+
+// Wedding-specific heading style
+h1 {
+  font-family: var(--headerFont);
+  font-weight: 300;
+  letter-spacing: 0.04em;
+  border-bottom: 1px solid var(--lightgray);
+  padding-bottom: 0.5rem;
+}
+
+// Callout boxes — use > [!info] style in notes
+.callout {
+  border-left: 3px solid var(--tertiary);
+  background: var(--highlight);
+}
+
+// Image centering — wrap images in a nice display
+img {
+  border-radius: 8px;
+  max-width: 100%;
+}
+
+// Centered hero text on the home page
+#quartz-body .page-header {
+  text-align: center;
+}
