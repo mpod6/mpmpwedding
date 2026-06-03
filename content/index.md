@@ -1,6 +1,5 @@
 ---
 title: Welcome to our Wedding page
-description: Homepage; welcome and details
 ---
 This website is under *heavy* construction, so please excuse the mess...
 
