@@ -16,20 +16,20 @@ configuration:
     fontOrigin: googleFonts
     cdnCaching: true
     typography:
-      header: Estonia
+      header: Quintessential
       body: Cormorant
       code: JetBrains Mono
     colors:
       lightMode:
-        light: "#fdf8f4"      # warm off-white background
-        lightgray: "#e8ddd5"
-        gray: "#b09a8a"
-        darkgray: "#5c4a3e"
-        dark: "#2e1f17"
-        secondary: "#8b5e52"  # dusty rose for links
+        light: "#fcf5e4"      # warm off-white background
+        lightgray: "#fcf5e4"
+        gray: "#e4d1c8"
+        darkgray: "#fcf5e4"
+        dark: "#6db679"
+        secondary: "#6db679"  # dusty rose for links
         tertiary: "#c4956a"   # gold for hover states
         highlight: "rgba(196,149,106,0.15)"
-        texthighlight: "#fce4d6"
+        texthighlight: "#519d5c"
       darkMode:
         light: "#1a1210"
         lightgray: "#2e2018"
