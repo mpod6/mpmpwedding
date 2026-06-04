@@ -16,30 +16,30 @@ configuration:
     fontOrigin: googleFonts
     cdnCaching: true
     typography:
-      header: Cornmorant
-      body: Cormorant
-      code: JetBrains Mono
+      header: Libre Baskerville   # warm serif for headings
+      body: Source Serif 4        # readable body serif
+      code: JetBrains Mono        # monospace
     colors:
       lightMode:
-        light: "#fcf5e4"      # warm off-white background
-        lightgray: "#fcf5e4"
-        gray: "#e4d1c8"
-        darkgray: "#fcf5e4"
-        dark: "#6db679"
-        secondary: "#6db679"  # dusty rose for links
-        tertiary: "#c4956a"   # gold for hover states
-        highlight: "rgba(196,149,106,0.15)"
-        texthighlight: "#519d5c"
+        light:         "#fbf3dd"                   # page bg — warm cream
+        lightgray:     "#ede6d0"                   # borders — tan parchment
+        gray:          "#c0b99e"                   # graph links, heavier borders
+        darkgray:      "#595959"                   # body text — medium gray
+        dark:          "#262626"                   # headers & icons — near-black
+        secondary:     "#519d5c"                   # links — sage/forest green
+        tertiary:      "#3d7a46"                   # hover / visited graph nodes
+        highlight:     "rgba(229, 181, 103, 0.20)" # internal link bg, highlighted code lines
+        textHighlight: "rgba(229, 181, 103, 0.40)" # ==markdown highlight== bg
       darkMode:
-        light: "#1a1210"
-        lightgray: "#2e2018"
-        gray: "#7a5c50"
-        darkgray: "#c4a898"
-        dark: "#f5ece7"
-        secondary: "#d4897a"
-        tertiary: "#c4956a"
-        highlight: "rgba(196,149,106,0.1)"
-        texthighlight: "#5c2e20"
+        light:         "#262626"                   # page bg — charcoal
+        lightgray:     "#332e28"                   # borders — warm dark panel
+        gray:          "#555555"                   # graph links, heavier borders
+        darkgray:      "#c5b8a1"                   # body text — warm light tan
+        dark:          "#e8ddc8"                   # headers & icons — warm off-white
+        secondary:     "#519d5c"                   # links — same sage green
+        tertiary:      "#6abf77"                   # hover / visited graph nodes
+        highlight:     "rgba(255, 177, 80, 0.15)"  # internal link bg, highlighted code lines
+        textHighlight: "rgba(255, 177, 80, 0.30)"  # ==markdown highlight== bg
 plugins:
   - source: github:quartz-community/created-modified-date
     enabled: true

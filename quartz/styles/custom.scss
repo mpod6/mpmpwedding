@@ -36,3 +36,105 @@ img {
 #quartz-body .page-header {
   text-align: center;
 }
+// ── Typewriter theme tweaks for Quartz v5 ─────────────────────────────── //
+
+// --- Code blocks ----------------------------------------------------------
+:root[saved-theme="light"] {
+  --code-background: #eee8d5;   // matches Typewriter's --code-background
+}
+
+:root[saved-theme="dark"] {
+  --code-background: #1e1e1e;   // tasteful dark code bg
+}
+
+pre, code {
+  background-color: var(--code-background) !important;
+  border: 1px solid var(--lightgray);
+  border-radius: 4px;
+}
+
+// --- Typography -----------------------------------------------------------
+body {
+  line-height: 1.55;
+  font-size: 1em;
+}
+
+h1 { font-size: 1.8em;  font-weight: 600; }
+h2 { font-size: 1.55em; font-weight: 600; }
+h3 { font-size: 1.35em; font-weight: 550; }
+h4 { font-size: 1.15em; font-weight: 550; }
+h5 { font-size: 1em;    font-weight: 550; }
+h6 { font-size: 0.95em; font-weight: 550; }
+
+// --- Links ----------------------------------------------------------------
+a {
+  color: var(--secondary);
+  text-decoration: none;
+
+  &:hover {
+    color: var(--tertiary);
+    text-decoration: underline;
+  }
+}
+
+// --- Blockquotes ----------------------------------------------------------
+blockquote {
+  border-left: 3px solid var(--secondary);
+  color: var(--darkgray);
+  padding-left: 1em;
+  margin: 1.2em 0;
+  font-style: italic;
+}
+
+// --- Selection highlight --------------------------------------------------
+::selection {
+  background: var(--highlight);
+}
+
+:root[saved-theme="dark"] ::selection {
+  background: rgba(23, 48, 77, 0.99);   // Typewriter dark --text-selection
+}
+
+// --- Horizontal rule ------------------------------------------------------
+hr {
+  border: none;
+  border-top: 1px solid var(--lightgray);
+  margin: 2em 0;
+}
+
+// --- Tables ---------------------------------------------------------------
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  border: 1px solid var(--lightgray);
+  padding: 0.5em 0.75em;
+}
+
+th {
+  background-color: var(--lightgray);
+  font-weight: 600;
+}
+
+// --- Scrollbar ------------------------------------------------------------
+::-webkit-scrollbar             { width: 8px; height: 8px; }
+::-webkit-scrollbar-track       { background: transparent; }
+::-webkit-scrollbar-thumb       { background: rgba(128,128,128,0.2); border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(128,128,128,0.4); }
+
+// --- Tag pills ------------------------------------------------------------
+.tag-link, a.tag-link {
+  background-color: var(--highlight);
+  border-radius: 3px;
+  padding: 1px 6px;
+  font-size: 0.85em;
+  color: var(--secondary);
+
+  &:hover {
+    background-color: var(--secondary);
+    color: var(--light);
+    text-decoration: none;
+  }
+}
