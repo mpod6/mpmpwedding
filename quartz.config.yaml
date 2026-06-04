@@ -16,7 +16,7 @@ configuration:
     fontOrigin: googleFonts
     cdnCaching: true
     typography:
-      header: Quintessential
+      header: Cornmorant
       body: Cormorant
       code: JetBrains Mono
     colors:
