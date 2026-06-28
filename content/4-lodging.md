@@ -1,7 +1,7 @@
 ---
 title: Lodging
 aliases:
-  - travel
+  - lodging
 ---
 
 
