@@ -1,6 +1,8 @@
 ---
 title: Marisa & Max
 description: August 28, 2027
+aliases:
+  - index
 ---
 ***
 This website is currently under construction. Content and layout is subject to change.

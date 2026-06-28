@@ -1,6 +1,8 @@
 ---
 title: Schedule
 desc: Day-of Schedule
+aliases:
+  - schedule
 ---
 
 

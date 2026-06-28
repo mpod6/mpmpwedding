@@ -1,6 +1,8 @@
 ---
 title: Travel
 description: Local and Out of State travel advice
+aliases:
+  - travel
 ---
 # via Car
 

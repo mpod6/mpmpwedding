@@ -1,5 +1,7 @@
 ---
 title: Lodging
+aliases:
+  - travel
 ---
 
 
