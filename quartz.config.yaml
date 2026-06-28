@@ -78,7 +78,7 @@ plugins:
     enabled: true
     order: 40
   - source: github:quartz-community/table-of-contents
-    enabled: true
+    enabled: false
     order: 50
     layout:
       position: right
@@ -117,7 +117,7 @@ plugins:
     options: {}
     order: 45
   - source: github:quartz-community/encrypted-pages
-    enabled: true
+    enabled: false
     options:
       iterations: 600000
       passwordField: password
@@ -135,7 +135,7 @@ plugins:
     enabled: true
     options:
       enableSiteMap: true
-      enableRSS: true
+      enableRSS: false
   - source: github:quartz-community/favicon
     enabled: true
   - source: github:quartz-community/og-image
@@ -156,7 +156,7 @@ plugins:
       position: left
       priority: 50
   - source: github:quartz-community/graph
-    enabled: true
+    enabled: false
     layout:
       position: right
       priority: 10
@@ -169,7 +169,7 @@ plugins:
       groupOptions:
         grow: true
   - source: github:quartz-community/backlinks
-    enabled: true
+    enabled: false
     layout:
       position: right
       priority: 50
@@ -179,7 +179,7 @@ plugins:
       position: beforeBody
       priority: 10
   - source: github:quartz-community/content-meta
-    enabled: true
+    enabled: false
     layout:
       position: beforeBody
       priority: 20
@@ -200,13 +200,13 @@ plugins:
       priority: 30
       group: toolbar
   - source: github:quartz-community/reader-mode
-    enabled: true
+    enabled: false
     layout:
       position: left
       priority: 35
       group: toolbar
   - source: github:quartz-community/breadcrumbs
-    enabled: true
+    enabled: false
     layout:
       position: beforeBody
       priority: 5
@@ -223,8 +223,9 @@ plugins:
     enabled: true
     options:
       links:
-        GitHub: https://github.com/jackyzha0/quartz
-        Discord Community: https://discord.gg/cRFFHYye7t
+        RSVP: /rsvp
+        Travel & Hotel Information: /travel
+        Registry: /registry
   - source: github:quartz-community/recent-notes
     enabled: false
   - source: github:quartz-community/spacer

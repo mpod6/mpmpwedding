@@ -1,140 +1,73 @@
-// custom.scss
+// ── Hide wiki-graph entirely ──────────────────────────────────────────────────
+.graph { display: none !important; }
 
-// Hide the explorer (folder tree) on all pages — you don't need it
-.left .explorer { display: none; }
+// ── Hide "last modified" date bar ────────────────────────────────────────────
+.content-meta { display: none !important; }
 
-// Hide "last modified" date (optional — useful if pages don't change often)
-.meta { display: none; }
+// ── Explorer sidebar: clean up labels ────────────────────────────────────────
+.explorer-title { display: none; } // hides "Explorer" heading
 
-// Full-width content on mobile
-@media (max-width: 768px) {
-  .page > #quartz-body { padding: 0 1rem; }
-}
-
-// Wedding-specific heading style
+// ── Heading style: elegant, not techy ────────────────────────────────────────
 h1 {
-  font-family: var(--headerFont);
-  font-weight: 300;
-  letter-spacing: 0.04em;
+  font-weight: 400;
+  letter-spacing: 0.03em;
   border-bottom: 1px solid var(--lightgray);
-  padding-bottom: 0.5rem;
+  padding-bottom: 0.5em;
+  margin-bottom: 1em;
 }
 
-// Callout boxes — use > [!info] style in notes
-.callout {
-  border-left: 3px solid var(--tertiary);
-  background: var(--highlight);
+h2 {
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  color: var(--secondary);
 }
 
-// Image centering — wrap images in a nice display
-img {
+// ── Make images rounded and centered ─────────────────────────────────────────
+article img {
   border-radius: 8px;
   max-width: 100%;
+  display: block;
+  margin: 1.5rem auto;
 }
 
-// Centered hero text on the home page
-#quartz-body .page-header {
-  text-align: center;
-}
-// ── Typewriter theme tweaks for Quartz v5 ─────────────────────────────── //
-
-// --- Code blocks ----------------------------------------------------------
-:root[saved-theme="light"] {
-  --code-background: #eee8d5;   // matches Typewriter's --code-background
-}
-
-:root[saved-theme="dark"] {
-  --code-background: #1e1e1e;   // tasteful dark code bg
-}
-
-pre, code {
-  background-color: var(--code-background) !important;
-  border: 1px solid var(--lightgray);
-  border-radius: 4px;
-}
-
-// --- Typography -----------------------------------------------------------
-body {
-  line-height: 1.55;
-  font-size: 1em;
-}
-
-h1 { font-size: 1.8em;  font-weight: 600; }
-h2 { font-size: 1.55em; font-weight: 600; }
-h3 { font-size: 1.35em; font-weight: 550; }
-h4 { font-size: 1.15em; font-weight: 550; }
-h5 { font-size: 1em;    font-weight: 550; }
-h6 { font-size: 0.95em; font-weight: 550; }
-
-// --- Links ----------------------------------------------------------------
-a {
-  color: var(--secondary);
-  text-decoration: none;
-
-  &:hover {
-    color: var(--tertiary);
-    text-decoration: underline;
-  }
-}
-
-// --- Blockquotes ----------------------------------------------------------
-blockquote {
+// ── Callout styling (for [!info] and [!tip] blocks) ──────────────────────────
+.callout {
   border-left: 3px solid var(--secondary);
-  color: var(--darkgray);
-  padding-left: 1em;
-  margin: 1.2em 0;
-  font-style: italic;
+  background-color: var(--highlight);
+  border-radius: 0 6px 6px 0;
+  padding: 1rem 1.25rem;
+  margin: 1.5rem 0;
 }
 
-// --- Selection highlight --------------------------------------------------
-::selection {
-  background: var(--highlight);
+// ── Make the home page title centered ────────────────────────────────────────
+.page-header h1 {
+  text-align: center;
+  border-bottom: none;
+  font-size: 2.2em;
+  margin-top: 2rem;
 }
 
-:root[saved-theme="dark"] ::selection {
-  background: rgba(23, 48, 77, 0.99);   // Typewriter dark --text-selection
-}
-
-// --- Horizontal rule ------------------------------------------------------
-hr {
-  border: none;
-  border-top: 1px solid var(--lightgray);
-  margin: 2em 0;
-}
-
-// --- Tables ---------------------------------------------------------------
+// ── Table styling ────────────────────────────────────────────────────────────
 table {
   border-collapse: collapse;
   width: 100%;
+  margin: 1.5rem 0;
 }
-
 th, td {
   border: 1px solid var(--lightgray);
-  padding: 0.5em 0.75em;
+  padding: 0.6rem 1rem;
+  text-align: left;
 }
-
 th {
-  background-color: var(--lightgray);
-  font-weight: 600;
+  background-color: var(--highlight);
+  font-weight: 500;
 }
 
-// --- Scrollbar ------------------------------------------------------------
-::-webkit-scrollbar             { width: 8px; height: 8px; }
-::-webkit-scrollbar-track       { background: transparent; }
-::-webkit-scrollbar-thumb       { background: rgba(128,128,128,0.2); border-radius: 4px; }
-::-webkit-scrollbar-thumb:hover { background: rgba(128,128,128,0.4); }
+// ── Links: use tertiary (gold) on hover ──────────────────────────────────────
+a:hover { color: var(--tertiary); }
 
-// --- Tag pills ------------------------------------------------------------
-.tag-link, a.tag-link {
-  background-color: var(--highlight);
-  border-radius: 3px;
-  padding: 1px 6px;
-  font-size: 0.85em;
-  color: var(--secondary);
-
-  &:hover {
-    background-color: var(--secondary);
-    color: var(--light);
-    text-decoration: none;
-  }
+// ── Mobile: full-width content ───────────────────────────────────────────────
+@media (max-width: 800px) {
+  .sidebar { display: none; }
+  .page > .center { padding: 0 1rem; }
 }
