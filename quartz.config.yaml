@@ -152,6 +152,23 @@ plugins:
     enabled: true
   - source: github:quartz-community/explorer
     enabled: true
+    options:
+      sortFn: |
+        (a, b) => {
+          if (a.isFolder && !b.isFolder) return -1
+          if (!a.isFolder && b.isFolder) return 1
+          const getOrder = (node) => {
+            const tags = (node.data && node.data.tags) || []
+            const navTag = tags.find(t => /^nav-\d+$/.test(t))
+            return navTag ? parseInt(navTag.split("-")[1], 10) : null
+          }
+          const orderA = getOrder(a)
+          const orderB = getOrder(b)
+          if (orderA !== null && orderB !== null) return orderA - orderB
+          if (orderA !== null) return -1
+          if (orderB !== null) return 1
+          return (a.displayName || "").localeCompare(b.displayName || "", undefined, { numeric: true, sensitivity: "base" })
+        }
     layout:
       position: left
       priority: 50
@@ -241,12 +258,11 @@ plugins:
     options: {}
     order: 50
   - source: github:quartz-community/note-properties
-    enabled: false
+    enabled: enable
     options:
       includeAll: false
       includedProperties:
         - description
-        - tags
         - aliases
       excludedProperties: []
       hidePropertiesView: false
