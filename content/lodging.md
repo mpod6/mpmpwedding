@@ -1,7 +1,5 @@
 ---
 title: Lodging
-aliases:
-  - lodging
 ---
 
 
