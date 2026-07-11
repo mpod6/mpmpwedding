@@ -16,30 +16,30 @@ configuration:
     fontOrigin: googleFonts
     cdnCaching: true
     typography:
-      header: Libre Baskerville   # warm serif for headings
-      body: Source Serif 4        # readable body serif
+      header: Cormorant Garamond  # elegant high-contrast serif, italic for names
+      body: EB Garamond           # romantic, readable body serif
       code: JetBrains Mono        # monospace
     colors:
       lightMode:
-        light:         "#fbf3dd"                   # page bg — warm cream
-        lightgray:     "#ede6d0"                   # borders — tan parchment
-        gray:          "#c0b99e"                   # graph links, heavier borders
-        darkgray:      "#595959"                   # body text — medium gray
-        dark:          "#262626"                   # headers & icons — near-black
-        secondary:     "#519d5c"                   # links — sage/forest green
-        tertiary:      "#3d7a46"                   # hover / visited graph nodes
-        highlight:     "rgba(229, 181, 103, 0.20)" # internal link bg, highlighted code lines
-        textHighlight: "rgba(229, 181, 103, 0.40)" # ==markdown highlight== bg
-      darkMode:
-        light:         "#262626"                   # page bg — charcoal
-        lightgray:     "#332e28"                   # borders — warm dark panel
-        gray:          "#555555"                   # graph links, heavier borders
-        darkgray:      "#c5b8a1"                   # body text — warm light tan
-        dark:          "#e8ddc8"                   # headers & icons — warm off-white
-        secondary:     "#519d5c"                   # links — same sage green
-        tertiary:      "#6abf77"                   # hover / visited graph nodes
-        highlight:     "rgba(255, 177, 80, 0.15)"  # internal link bg, highlighted code lines
-        textHighlight: "rgba(255, 177, 80, 0.30)"  # ==markdown highlight== bg
+        light:         "#f7f3e8"                   # page bg — soft ivory (Vinery paper)
+        lightgray:     "#e0d9c4"                   # borders — warm stone (venue greige)
+        gray:          "#a89f83"                   # muted details, small caps accents
+        darkgray:      "#45483c"                   # body text — warm deep olive-charcoal
+        dark:          "#2e3527"                   # headers — deep forest charcoal
+        secondary:     "#5f7247"                   # links & accents — olive sage vine
+        tertiary:      "#7d8f58"                   # hover — lighter moss
+        highlight:     "rgba(125, 143, 88, 0.12)"  # internal link bg
+        textHighlight: "rgba(196, 181, 110, 0.35)" # ==markdown highlight== bg
+      darkMode:        # intentionally identical — one consistent stationery look
+        light:         "#f7f3e8"
+        lightgray:     "#e0d9c4"
+        gray:          "#a89f83"
+        darkgray:      "#45483c"
+        dark:          "#2e3527"
+        secondary:     "#5f7247"
+        tertiary:      "#7d8f58"
+        highlight:     "rgba(125, 143, 88, 0.12)"
+        textHighlight: "rgba(196, 181, 110, 0.35)"
 plugins:
   - source: github:quartz-community/created-modified-date
     enabled: true
@@ -151,7 +151,7 @@ plugins:
   - source: github:quartz-community/tag-page
     enabled: true
   - source: github:quartz-community/explorer
-    enabled: true
+    enabled: false # replaced by ./plugins/wedding-nav static top nav
     options:
       sortFn: |
         (a, b) => {
@@ -178,7 +178,7 @@ plugins:
       position: right
       priority: 10
   - source: github:quartz-community/search
-    enabled: true
+    enabled: false # 9-page site; nav covers everything
     layout:
       position: left
       priority: 20
@@ -206,12 +206,12 @@ plugins:
       position: beforeBody
       priority: 30
   - source: github:quartz-community/page-title
-    enabled: true
+    enabled: false # replaced by wedding-nav masthead wordmark
     layout:
       position: left
       priority: 10
   - source: github:quartz-community/darkmode
-    enabled: true
+    enabled: false # single stationery appearance; no theme toggle
     layout:
       position: left
       priority: 30
@@ -246,7 +246,7 @@ plugins:
   - source: github:quartz-community/recent-notes
     enabled: false
   - source: github:quartz-community/spacer
-    enabled: true
+    enabled: false
     options: {}
     order: 25
     layout:
@@ -277,7 +277,9 @@ plugins:
       name: quartz-themes
       repo: github:saberzero1/quartz-themes
       subdir: plugin
-    enabled: true
+    enabled: false # DISABLED: this plugin's Obsidian theme CSS loads after the
+                   # config-generated stylesheet and overrides the color palette
+                   # defined above (this was the "colors don't apply" bug)
     options:
       theme: default
   - source: github:quartz-community/obsidian-plugin-excalidraw
@@ -287,6 +289,11 @@ plugins:
       darkMode: auto
       exportPadding: 20
     order: 50
+  - source: ./plugins/wedding-nav
+    enabled: true
+    layout:
+      position: beforeBody
+      priority: 1 # renders above article-title (priority 10) on every page
 layout:
   groups:
     toolbar:
@@ -295,17 +302,20 @@ layout:
       gap: 0.5rem
   byPageType:
     "404":
+      template: full-width
       positions:
-        beforeBody: []
         left: []
         right: []
-    content: {}
+    content:
+      template: full-width
     folder:
+      template: full-width
       exclude:
         - reader-mode
       positions:
         right: []
     tag:
+      template: full-width
       exclude:
         - reader-mode
       positions:

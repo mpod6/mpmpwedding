@@ -1,59 +1,130 @@
-// ── Hide wiki-graph entirely ──────────────────────────────────────────────────
-.graph { display: none !important; }
+// ════════════════════════════════════════════════════════════════════════════
+// Marisa & Max — wedding site theme
+// Inspired by the "Romantics" invitation suite (Vinery colorway):
+// hand-painted botanicals, ivory paper, olive-sage greens, elegant serifs.
+// Palette variables (--light, --secondary, …) come from quartz.config.yaml.
+// ════════════════════════════════════════════════════════════════════════════
 
-// ── Hide "last modified" date bar ────────────────────────────────────────────
-.content-meta { display: none !important; }
+// ── Global canvas ─────────────────────────────────────────────────────────────
+html {
+  scroll-behavior: smooth;
+}
 
-// ── Explorer sidebar: clean up labels ────────────────────────────────────────
-.explorer-title { display: none; } // hides "Explorer" heading
+body {
+  font-kerning: normal;
+  -webkit-font-smoothing: antialiased;
+}
 
-// ── Heading style: elegant, not techy ────────────────────────────────────────
-h1 {
-  font-weight: 400;
-  letter-spacing: 0.03em;
-  border-bottom: 1px solid var(--lightgray);
-  padding-bottom: 0.5em;
-  margin-bottom: 1em;
+// EB Garamond runs small; give body copy a comfortable reading size
+article {
+  font-size: 1.16rem;
+  line-height: 1.75;
+  letter-spacing: 0.005em;
+}
+
+// ── Single centered column ───────────────────────────────────────────────────
+// All page types use the "full-width" frame (no side rails); rein the column
+// back in to an elegant reading measure.
+.page > #quartz-body .center.full-width,
+.page > #quartz-body .center {
+  max-width: 44rem;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+// ── Headings: stationery serif treatment ─────────────────────────────────────
+h1,
+h2,
+h3 {
+  font-weight: 500;
+  color: var(--dark);
+}
+
+h1.article-title {
+  text-align: center;
+  font-size: 2.6rem;
+  font-style: italic;
+  letter-spacing: 0.02em;
+  margin: 1.6rem 0 0.4rem 0;
+}
+
+// vine flourish beneath every page title
+h1.article-title::after {
+  content: "";
+  display: block;
+  width: min(300px, 70%);
+  height: 30px;
+  margin: 0.7rem auto 0 auto;
+  background: url("/assets/vine-divider.svg") center / contain no-repeat;
 }
 
 h2 {
-  font-weight: 400;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-size: 1.15rem;
   color: var(--secondary);
+  text-align: center;
+  margin-top: 2.6rem;
 }
 
-// ── Make images rounded and centered ─────────────────────────────────────────
+h3 {
+  font-size: 1.25rem;
+  font-style: italic;
+  color: var(--dark);
+}
+
+// ── Horizontal rules become vine dividers ────────────────────────────────────
+article hr {
+  border: none;
+  height: 32px;
+  margin: 2.4rem auto;
+  width: min(320px, 75%);
+  background: url("/assets/vine-divider.svg") center / contain no-repeat;
+  overflow: visible;
+}
+
+// ── Links ─────────────────────────────────────────────────────────────────────
+article a {
+  color: var(--secondary);
+  text-decoration: none;
+  border-bottom: 1px solid color-mix(in srgb, var(--secondary) 40%, transparent);
+  transition: color 0.2s ease, border-color 0.2s ease;
+
+  &:hover {
+    color: var(--tertiary);
+    border-bottom-color: var(--tertiary);
+  }
+}
+
+// ── Images ────────────────────────────────────────────────────────────────────
 article img {
-  border-radius: 8px;
+  border-radius: 6px;
   max-width: 100%;
   display: block;
-  margin: 1.5rem auto;
+  margin: 1.6rem auto;
 }
 
-// ── Callout styling (for [!info] and [!tip] blocks) ──────────────────────────
+// ── Callouts (e.g. [!info], [!tip]) ──────────────────────────────────────────
 .callout {
+  border: 1px solid var(--lightgray);
   border-left: 3px solid var(--secondary);
   background-color: var(--highlight);
   border-radius: 0 6px 6px 0;
   padding: 1rem 1.25rem;
-  margin: 1.5rem 0;
+  margin: 1.6rem 0;
 }
 
-// ── Make the home page title centered ────────────────────────────────────────
-.page-header h1 {
-  text-align: center;
-  border-bottom: none;
-  font-size: 2.2em;
-  margin-top: 2rem;
-}
-
-// ── Table styling ────────────────────────────────────────────────────────────
+// ── Tables ────────────────────────────────────────────────────────────────────
 table {
   border-collapse: collapse;
   width: 100%;
-  margin: 1.5rem 0;
+  margin: 1.6rem 0;
+  font-size: 1.02rem;
 }
-th, td {
+th,
+td {
   border: 1px solid var(--lightgray);
   padding: 0.6rem 1rem;
   text-align: left;
@@ -61,13 +132,208 @@ th, td {
 th {
   background-color: var(--highlight);
   font-weight: 500;
+  font-family: var(--headerFont);
+  letter-spacing: 0.06em;
 }
 
-// ── Links: use tertiary (gold) on hover ──────────────────────────────────────
-a:hover { color: var(--tertiary); }
+// ── Hide leftover digital-garden chrome ──────────────────────────────────────
+.graph,
+.content-meta,
+.note-properties,
+.tag-list,
+.backlinks {
+  display: none !important;
+}
 
-// ── Mobile: full-width content ───────────────────────────────────────────────
-@media (max-width: 800px) {
-  .sidebar { display: none; }
-  .page > .center { padding: 0 1rem; }
+// ── Homepage: hide the auto article title; the hero handles it ───────────────
+body[data-slug="index"] h1.article-title {
+  display: none;
+}
+
+// ── Invitation hero (homepage) ────────────────────────────────────────────────
+.invitation-hero {
+  text-align: center;
+  padding: 1.8rem 0 1.2rem 0;
+
+  .hero-sprig {
+    width: 120px;
+    height: auto;
+    margin: 0 auto 0.6rem auto;
+    display: block;
+  }
+
+  .hero-eyebrow {
+    font-family: var(--headerFont);
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.34em;
+    color: var(--gray);
+    margin: 0 0 1rem 0;
+  }
+
+  .hero-names {
+    font-family: var(--headerFont);
+    font-style: italic;
+    font-weight: 500;
+    font-size: clamp(2.6rem, 8vw, 4rem);
+    line-height: 1.12;
+    color: var(--dark);
+    margin: 0;
+
+    .amp {
+      color: var(--secondary);
+      font-size: 0.8em;
+      padding: 0 0.08em;
+    }
+  }
+
+  .hero-invite {
+    font-style: italic;
+    font-size: 1.15rem;
+    color: var(--darkgray);
+    margin: 1.1rem 0 1.6rem 0;
+  }
+
+  .hero-date {
+    display: block;
+    font-family: var(--headerFont);
+    font-size: 1.02rem;
+    text-transform: uppercase;
+    letter-spacing: 0.26em;
+    color: var(--dark);
+  }
+
+  .hero-time {
+    display: block;
+    font-style: italic;
+    font-size: 1.05rem;
+    color: var(--darkgray);
+    margin-top: 0.45rem;
+  }
+
+  .hero-venue {
+    font-family: var(--headerFont);
+    font-size: 0.92rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    line-height: 2;
+    color: var(--darkgray);
+    margin: 1.6rem 0 2rem 0;
+  }
+}
+
+// ── Buttons ───────────────────────────────────────────────────────────────────
+a.cta-button {
+  display: inline-block;
+  font-family: var(--headerFont);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  color: var(--light) !important;
+  background-color: var(--secondary);
+  padding: 0.85rem 2.6rem;
+  border-radius: 2.5rem;
+  border-bottom: none !important;
+  transition: background-color 0.2s ease;
+
+  &:hover {
+    background-color: var(--tertiary);
+    color: var(--light) !important;
+  }
+}
+
+// ── Homepage quick-detail row ─────────────────────────────────────────────────
+.detail-row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 2.2rem 0 1rem 0;
+
+  a {
+    flex: 1 1 160px;
+    max-width: 200px;
+    text-align: center;
+    padding: 1.1rem 0.8rem;
+    border: 1px solid var(--lightgray);
+    border-radius: 6px;
+    font-family: var(--headerFont);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--darkgray);
+    background: transparent;
+    border-bottom: 1px solid var(--lightgray);
+    transition: border-color 0.2s ease, color 0.2s ease;
+
+    &:hover {
+      border-color: var(--secondary);
+      color: var(--secondary);
+    }
+  }
+}
+
+// ── Footer ────────────────────────────────────────────────────────────────────
+footer {
+  text-align: center;
+  margin: 3.5rem 0 2.5rem 0;
+  padding-top: 1.6rem;
+  border-top: 1px solid var(--lightgray);
+
+  // replace the Quartz attribution line with a quiet sign-off
+  p {
+    display: none;
+  }
+
+  &::before {
+    content: "Marisa & Max · August 28, 2027 · Stony Brook, New York";
+    display: block;
+    font-family: var(--headerFont);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.24em;
+    color: var(--gray);
+    margin-bottom: 0.9rem;
+  }
+
+  ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.3rem 1.6rem;
+    padding: 0;
+    margin: 0;
+  }
+
+  li {
+    margin: 0;
+  }
+
+  a {
+    font-family: var(--headerFont);
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    color: var(--darkgray);
+    background-image: none;
+    text-decoration: none;
+
+    &:hover {
+      color: var(--secondary);
+    }
+  }
+}
+
+// ── Mobile refinements ────────────────────────────────────────────────────────
+@media all and (max-width: 800px) {
+  article {
+    font-size: 1.08rem;
+  }
+  h1.article-title {
+    font-size: 2.1rem;
+  }
+  .invitation-hero .hero-venue {
+    letter-spacing: 0.14em;
+  }
 }

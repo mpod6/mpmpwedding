@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 110" width="160" height="110" fill="none" aria-hidden="true">
+  <!-- three arching stems rising from a loose gather point -->
+  <path d="M80 104 C 78 80, 70 56, 48 34" stroke="#5f7247" stroke-width="1.6" stroke-linecap="round"/>
+  <path d="M80 104 C 80 76, 80 48, 80 22" stroke="#5f7247" stroke-width="1.6" stroke-linecap="round"/>
+  <path d="M80 104 C 82 80, 90 56, 112 34" stroke="#5f7247" stroke-width="1.6" stroke-linecap="round"/>
+
+  <!-- left stem leaves -->
+  <path d="M62 62 C 50 58, 46 68, 56 72 C 61 71, 63 66, 62 62 Z" fill="#7d8f58"/>
+  <path d="M54 46 C 44 40, 38 50, 48 55 C 52 53, 55 49, 54 46 Z" fill="#5f7247"/>
+  <path d="M48 34 C 42 24, 32 30, 38 38 C 42 40, 46 38, 48 34 Z" fill="#8a9a63"/>
+
+  <!-- center stem leaves -->
+  <path d="M80 66 C 68 62, 64 72, 74 76 C 78 75, 81 70, 80 66 Z" fill="#8a9a63"/>
+  <path d="M80 66 C 92 62, 96 72, 86 76 C 82 75, 79 70, 80 66 Z" fill="#7d8f58"/>
+  <path d="M80 44 C 70 38, 66 48, 76 52 C 79 50, 81 47, 80 44 Z" fill="#5f7247"/>
+  <path d="M80 44 C 90 38, 94 48, 84 52 C 81 50, 79 47, 80 44 Z" fill="#8a9a63"/>
+
+  <!-- right stem leaves -->
+  <path d="M98 62 C 110 58, 114 68, 104 72 C 99 71, 97 66, 98 62 Z" fill="#7d8f58"/>
+  <path d="M106 46 C 116 40, 122 50, 112 55 C 108 53, 105 49, 106 46 Z" fill="#5f7247"/>
+  <path d="M112 34 C 118 24, 128 30, 122 38 C 118 40, 114 38, 112 34 Z" fill="#8a9a63"/>
+
+  <!-- crowning bloom on the center stem -->
+  <g transform="translate(80 16)">
+    <ellipse rx="3.4" ry="6" transform="rotate(0)" fill="#c4b56e" opacity="0.92"/>
+    <ellipse rx="3.4" ry="6" transform="rotate(72)" fill="#c4b56e" opacity="0.92"/>
+    <ellipse rx="3.4" ry="6" transform="rotate(144)" fill="#c4b56e" opacity="0.92"/>
+    <ellipse rx="3.4" ry="6" transform="rotate(216)" fill="#c4b56e" opacity="0.92"/>
+    <ellipse rx="3.4" ry="6" transform="rotate(288)" fill="#c4b56e" opacity="0.92"/>
+    <circle r="2.3" fill="#5f7247"/>
+  </g>
+
+  <!-- side buds -->
+  <circle cx="44" cy="28" r="2.4" fill="#a89f83"/>
+  <circle cx="116" cy="28" r="2.4" fill="#a89f83"/>
+  <circle cx="68" cy="86" r="1.8" fill="#a89f83"/>
+  <circle cx="92" cy="86" r="1.8" fill="#a89f83"/>
+</svg>
