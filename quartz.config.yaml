@@ -294,6 +294,23 @@ plugins:
     layout:
       position: beforeBody
       priority: 1 # renders above article-title (priority 10) on every page
+  - source: ./plugins/rsvp-widget
+    enabled: true
+    options:
+      # ── THE GATE ──────────────────────────────────────────────────────────
+      # false → the RSVP page shows "RSVPs will open at a later date"
+      # true  → the interactive RSVP form is live
+      # (Optional backstop: set Netlify env var RSVP_OPEN=false to also block
+      #  the API itself while the gate is down.)
+      rsvpOpen: false
+      # Meal choices shown in the form — update once the menu is set with the venue
+      meals:
+        - Herb-Roasted Chicken
+        - Pan-Seared Salmon
+        - Vegetarian
+    layout:
+      position: afterBody
+      priority: 10 # renders beneath the page text; component only outputs on /rsvp
 layout:
   groups:
     toolbar:

@@ -1,0 +1,17 @@
+[
+  {
+    "party": "smith-jane-john",
+    "members": ["Jane Smith", "John Smith"],
+    "plusOnes": 0
+  },
+  {
+    "party": "garcia-sofia",
+    "members": ["Sofía García"],
+    "plusOnes": 1
+  },
+  {
+    "party": "lee-family",
+    "members": ["Amy Lee", "Ben Lee", "Chris Lee"],
+    "plusOnes": 0
+  }
+]

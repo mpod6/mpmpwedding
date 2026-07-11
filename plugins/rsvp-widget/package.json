@@ -1,0 +1,47 @@
+{
+  "name": "mpmp-rsvp-widget",
+  "version": "1.0.0",
+  "description": "RSVP form for the wedding site: name lookup, per-guest attendance and meals, plus-one handling, allergies, and song requests. Talks to the Netlify Functions API. Includes a config-toggled 'RSVPs open later' gate.",
+  "type": "module",
+  "license": "MIT",
+  "sideEffects": false,
+  "main": "./dist/index.js",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js"
+    },
+    "./components": {
+      "import": "./dist/components/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "peerDependencies": {
+    "preact": "^10.0.0"
+  },
+  "peerDependenciesMeta": {
+    "preact": {
+      "optional": false
+    }
+  },
+  "quartz": {
+    "name": "rsvp-widget",
+    "displayName": "RSVP Widget",
+    "category": "component",
+    "version": "1.0.0",
+    "quartzVersion": ">=5.0.0",
+    "dependencies": [],
+    "defaultOrder": 50,
+    "defaultEnabled": true,
+    "defaultOptions": {
+      "rsvpOpen": false,
+      "meals": ["Herb-Roasted Chicken", "Pan-Seared Salmon", "Vegetarian"]
+    },
+    "components": {
+      "RsvpWidget": {
+        "displayName": "RSVP Widget",
+        "defaultPosition": "afterBody",
+        "defaultPriority": 10
+      }
+    }
+  }
+}
