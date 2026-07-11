@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//mpmp.wedding//Wedding//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:wedding-20270828@mpmp.wedding
+DTSTAMP:20260711T000000Z
+DTSTART:20270828T213000Z
+DTEND:20270829T050000Z
+SUMMARY:Marisa & Max's Wedding
+LOCATION:The Estate at Three Village Inn\, 150 Main St\, Stony Brook\, NY 
+ 11790
+DESCRIPTION:The order of the evening:\n5:30 - 6:00 pm | Ceremony\n6:00 - 7
+ :00 pm | Cocktail Hour\n7:00 - 11:00 pm | Reception - dinner & dancing\n1
+ 1:00 pm - 1:00 am | Afterparty\n\nAll the details: https://mpmp.wedding
+URL:https://mpmp.wedding
+STATUS:CONFIRMED
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Marisa & Max's Wedding — tomorrow!
+TRIGGER:-P1D
+END:VALARM
+END:VEVENT
+END:VCALENDAR

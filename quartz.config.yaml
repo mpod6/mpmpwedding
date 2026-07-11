@@ -139,7 +139,10 @@ plugins:
   - source: github:quartz-community/favicon
     enabled: true
   - source: github:quartz-community/og-image
-    enabled: true
+    enabled: false # replaced by a hand-designed static preview at
+                   # quartz/static/og-image.png (Quartz falls back to it
+                   # automatically); per-page generated previews added nothing
+                   # for a 9-page wedding site
   - source: github:quartz-community/cname
     enabled: true
   - source: github:quartz-community/canvas-page

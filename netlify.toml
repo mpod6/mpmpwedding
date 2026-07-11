@@ -1,0 +1,10 @@
+# Headers only — build command & publish directory remain governed by the
+# Netlify UI settings. This restores the site-wide "stay out of search engines"
+# behavior (the old `meta-robots` frontmatter was decorative; Quartz never
+# emitted it as a real meta tag). Delete this block if you ever WANT the site
+# indexed by Google.
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Robots-Tag = "noindex"

@@ -167,7 +167,7 @@ body[data-slug="index"] h1.article-title {
     font-size: 0.78rem;
     text-transform: uppercase;
     letter-spacing: 0.34em;
-    color: var(--gray);
+    color: var(--secondary);
     margin: 0 0 1rem 0;
   }
 
@@ -292,7 +292,7 @@ footer {
     font-size: 0.75rem;
     text-transform: uppercase;
     letter-spacing: 0.24em;
-    color: var(--gray);
+    color: var(--darkgray);
     margin-bottom: 0.9rem;
   }
 
@@ -335,5 +335,226 @@ footer {
   }
   .invitation-hero .hero-venue {
     letter-spacing: 0.14em;
+  }
+}
+
+// ═════════════════════════════════════════════════════════════════════════════
+// Page-layout components (schedule timeline, info cards, illustrated map)
+// ═════════════════════════════════════════════════════════════════════════════
+
+// ── Day-of timeline ───────────────────────────────────────────────────────────
+.timeline {
+  max-width: 26rem;
+  margin: 2rem auto;
+  padding: 0;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 9rem;
+    top: 0.6rem;
+    bottom: 0.6rem;
+    width: 1px;
+    background: var(--lightgray);
+  }
+
+  .tl-item {
+    display: grid;
+    grid-template-columns: 8rem 2rem 1fr;
+    align-items: baseline;
+    margin: 1.5rem 0;
+  }
+
+  .tl-time {
+    font-family: var(--headerFont);
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--darkgray);
+    text-align: right;
+  }
+
+  .tl-dot {
+    justify-self: center;
+    align-self: center;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: var(--secondary);
+    border: 2px solid var(--light);
+    box-shadow: 0 0 0 1px var(--secondary);
+  }
+
+  .tl-body .tl-title {
+    display: block;
+    font-family: var(--headerFont);
+    font-style: italic;
+    font-size: 1.35rem;
+    color: var(--dark);
+    line-height: 1.2;
+  }
+
+  .tl-body .tl-note {
+    display: block;
+    font-size: 0.98rem;
+    font-style: italic;
+    color: var(--darkgray);
+    margin-top: 0.15rem;
+  }
+}
+
+.schedule-day {
+  text-align: center;
+  font-family: var(--headerFont);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.24em;
+  color: var(--darkgray);
+  margin: 0.4rem 0 0 0;
+}
+
+// ── Info cards (travel modes, lodging options) ───────────────────────────────
+.info-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 0.9rem;
+  margin: 1.8rem 0;
+
+  .card {
+    border: 1px solid var(--lightgray);
+    border-radius: 8px;
+    padding: 1rem 1.1rem;
+    background: color-mix(in srgb, var(--light) 55%, #ffffff);
+    text-align: center;
+
+    a {
+      border-bottom: none;
+    }
+
+    .card-title {
+      display: block;
+      font-family: var(--headerFont);
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--secondary);
+      margin-bottom: 0.35rem;
+    }
+
+    .card-body {
+      display: block;
+      font-size: 0.95rem;
+      color: var(--darkgray);
+      line-height: 1.5;
+    }
+  }
+
+  // cards that are themselves links (e.g. travel-mode quick links)
+  a.card {
+    text-decoration: none;
+    border-bottom: 1px solid var(--lightgray);
+    transition: border-color 0.2s ease, transform 0.15s ease;
+
+    &:hover {
+      border-color: var(--secondary);
+      transform: translateY(-2px);
+    }
+  }
+}
+
+// ── Outline button variant ────────────────────────────────────────────────────
+a.cta-button.outline {
+  color: var(--secondary) !important;
+  background: transparent;
+  border: 1px solid var(--secondary);
+
+  &:hover {
+    background: var(--highlight);
+    color: var(--secondary) !important;
+  }
+}
+
+.map-actions {
+  display: flex;
+  justify-content: center;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+  margin: 1.2rem 0 2rem 0;
+
+  a.cta-button {
+    padding: 0.62rem 1.6rem;
+    font-size: 0.78rem;
+  }
+}
+
+// ── Our Story epigraph ────────────────────────────────────────────────────────
+.story-epigraph {
+  text-align: center;
+  font-style: italic;
+  font-size: 1.2rem;
+  color: var(--darkgray);
+  max-width: 30rem;
+  margin: 2.2rem auto;
+}
+
+@media all and (max-width: 640px) {
+  .timeline::before {
+    left: 6rem;
+  }
+  .timeline .tl-item {
+    grid-template-columns: 5rem 2rem 1fr;
+  }
+}
+
+// ── FAQ accordion ─────────────────────────────────────────────────────────────
+.faq {
+  max-width: 38rem;
+  margin: 1.6rem auto;
+
+  .faq-item {
+    border: 1px solid var(--lightgray);
+    border-radius: 8px;
+    background: color-mix(in srgb, var(--light) 55%, #ffffff);
+    margin: 0.7rem 0;
+    padding: 0;
+    overflow: hidden;
+
+    summary {
+      cursor: pointer;
+      list-style: none;
+      font-family: var(--headerFont);
+      font-style: italic;
+      font-size: 1.18rem;
+      color: var(--dark);
+      padding: 0.9rem 2.6rem 0.9rem 1.2rem;
+      position: relative;
+      transition: color 0.2s ease;
+
+      &::-webkit-details-marker { display: none; }
+
+      &::after {
+        content: "+";
+        position: absolute;
+        right: 1.1rem;
+        top: 50%;
+        transform: translateY(-50%);
+        font-style: normal;
+        font-size: 1.3rem;
+        color: var(--secondary);
+        transition: transform 0.2s ease;
+      }
+
+      &:hover { color: var(--secondary); }
+    }
+
+    &[open] summary::after {
+      content: "–";
+    }
+
+    > p, > div {
+      padding: 0 1.2rem 1rem 1.2rem;
+      margin: 0;
+    }
   }
 }

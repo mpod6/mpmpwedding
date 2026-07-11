@@ -20,6 +20,8 @@ const LINKS = [
   { text: "Stay", slug: "lodging" },
   { text: "Things to Do", slug: "thingstodo" },
   { text: "Dress Code", slug: "dresscode" },
+  // Uncomment when the FAQ page is finished (and remove its `draft: true`):
+  // { text: "FAQ", slug: "faq" },
   { text: "Registry", slug: "registry" },
   { text: "RSVP", slug: "rsvp", cta: true },
 ]
@@ -92,7 +94,7 @@ WeddingNav.css = `
   font-size: 0.72rem;
   text-transform: uppercase;
   letter-spacing: 0.28em;
-  color: var(--gray);
+  color: var(--darkgray);
 }
 .wedding-masthead .masthead-nav ul {
   list-style: none;
