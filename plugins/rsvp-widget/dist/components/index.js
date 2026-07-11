@@ -91,7 +91,8 @@ const RsvpWidgetConstructor = (userOpts) => {
             jsx("p", { class: "rsvp-confirm-title", children: "Thank you!" }),
             jsx("p", {
               id: "rsvp-confirm-text",
-              children: "Your response has been recorded. You can return here any time to update it.",
+              children:
+                "Your response has been recorded. You can return here any time to update it.",
             }),
           ],
         }),

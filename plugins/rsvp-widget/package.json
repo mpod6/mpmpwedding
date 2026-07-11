@@ -34,7 +34,11 @@
     "defaultEnabled": true,
     "defaultOptions": {
       "rsvpOpen": false,
-      "meals": ["Herb-Roasted Chicken", "Pan-Seared Salmon", "Vegetarian"]
+      "meals": [
+        "Herb-Roasted Chicken",
+        "Pan-Seared Salmon",
+        "Vegetarian"
+      ]
     },
     "components": {
       "RsvpWidget": {

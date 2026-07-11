@@ -1,9 +1,19 @@
 // ════════════════════════════════════════════════════════════════════════════
 // Marisa & Max — wedding site theme
-// Inspired by the "Romantics" invitation suite (Vinery colorway):
-// hand-painted botanicals, ivory paper, olive-sage greens, elegant serifs.
-// Palette variables (--light, --secondary, …) come from quartz.config.yaml.
+// VERSION: mpmp-theme-v6 (cumulative — supersedes all earlier versions)
+// To verify this file is live: view-source on any page, open the index-*.css
+// link, and search for "mpmp-theme-v6".
+//
+// Alignment philosophy:
+//   centered → headings, hero, buttons, cards, timeline block, footer
+//   left     → body prose (centered paragraphs are hard to read at length)
 // ════════════════════════════════════════════════════════════════════════════
+
+:root {
+  // Version marker (survives minification). Verify the live stylesheet with:
+  //   getComputedStyle(document.documentElement).getPropertyValue("--mpmp-theme")
+  --mpmp-theme: "v6";
+}
 
 // ── Global canvas ─────────────────────────────────────────────────────────────
 html {
@@ -15,16 +25,14 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-// EB Garamond runs small; give body copy a comfortable reading size
 article {
   font-size: 1.16rem;
   line-height: 1.75;
   letter-spacing: 0.005em;
+  text-align: left;
 }
 
-// ── Single centered column ───────────────────────────────────────────────────
-// All page types use the "full-width" frame (no side rails); rein the column
-// back in to an elegant reading measure.
+// ── Single centered column ────────────────────────────────────────────────────
 .page > #quartz-body .center.full-width,
 .page > #quartz-body .center {
   max-width: 44rem;
@@ -34,7 +42,7 @@ article {
   box-sizing: border-box;
 }
 
-// ── Headings: stationery serif treatment ─────────────────────────────────────
+// ── Headings ──────────────────────────────────────────────────────────────────
 h1,
 h2,
 h3 {
@@ -50,7 +58,6 @@ h1.article-title {
   margin: 1.6rem 0 0.4rem 0;
 }
 
-// vine flourish beneath every page title
 h1.article-title::after {
   content: "";
   display: block;
@@ -75,7 +82,7 @@ h3 {
   color: var(--dark);
 }
 
-// ── Horizontal rules become vine dividers ────────────────────────────────────
+// ── Horizontal rules become vine dividers ─────────────────────────────────────
 article hr {
   border: none;
   height: 32px;
@@ -90,7 +97,9 @@ article a {
   color: var(--secondary);
   text-decoration: none;
   border-bottom: 1px solid color-mix(in srgb, var(--secondary) 40%, transparent);
-  transition: color 0.2s ease, border-color 0.2s ease;
+  transition:
+    color 0.2s ease,
+    border-color 0.2s ease;
 
   &:hover {
     color: var(--tertiary);
@@ -106,7 +115,7 @@ article img {
   margin: 1.6rem auto;
 }
 
-// ── Callouts (e.g. [!info], [!tip]) ──────────────────────────────────────────
+// ── Callouts ──────────────────────────────────────────────────────────────────
 .callout {
   border: 1px solid var(--lightgray);
   border-left: 3px solid var(--secondary);
@@ -114,6 +123,7 @@ article img {
   border-radius: 0 6px 6px 0;
   padding: 1rem 1.25rem;
   margin: 1.6rem 0;
+  text-align: left;
 }
 
 // ── Tables ────────────────────────────────────────────────────────────────────
@@ -136,7 +146,7 @@ th {
   letter-spacing: 0.06em;
 }
 
-// ── Hide leftover digital-garden chrome ──────────────────────────────────────
+// ── Hide leftover digital-garden chrome ───────────────────────────────────────
 .graph,
 .content-meta,
 .note-properties,
@@ -145,15 +155,20 @@ th {
   display: none !important;
 }
 
-// ── Homepage: hide the auto article title; the hero handles it ───────────────
+// ── Homepage: the hero replaces the auto page title ───────────────────────────
 body[data-slug="index"] h1.article-title {
   display: none;
 }
 
 // ── Invitation hero (homepage) ────────────────────────────────────────────────
+// Markup is plain block <p> elements: readable top-to-bottom even unstyled.
 .invitation-hero {
   text-align: center;
   padding: 1.8rem 0 1.2rem 0;
+
+  p {
+    margin: 0;
+  }
 
   .hero-sprig {
     width: 120px;
@@ -178,6 +193,7 @@ body[data-slug="index"] h1.article-title {
     font-size: clamp(2.6rem, 8vw, 4rem);
     line-height: 1.12;
     color: var(--dark);
+    text-align: center;
     margin: 0;
 
     .amp {
@@ -185,6 +201,11 @@ body[data-slug="index"] h1.article-title {
       font-size: 0.8em;
       padding: 0 0.08em;
     }
+  }
+
+  // hero headline is not an article heading — no vine flourish here
+  .hero-names::after {
+    display: none;
   }
 
   .hero-invite {
@@ -195,7 +216,6 @@ body[data-slug="index"] h1.article-title {
   }
 
   .hero-date {
-    display: block;
     font-family: var(--headerFont);
     font-size: 1.02rem;
     text-transform: uppercase;
@@ -204,7 +224,6 @@ body[data-slug="index"] h1.article-title {
   }
 
   .hero-time {
-    display: block;
     font-style: italic;
     font-size: 1.05rem;
     color: var(--darkgray);
@@ -220,6 +239,10 @@ body[data-slug="index"] h1.article-title {
     color: var(--darkgray);
     margin: 1.6rem 0 2rem 0;
   }
+
+  .hero-cta {
+    text-align: center;
+  }
 }
 
 // ── Buttons ───────────────────────────────────────────────────────────────────
@@ -227,6 +250,7 @@ a.cta-button {
   display: inline-block;
   font-family: var(--headerFont);
   font-size: 0.85rem;
+  text-align: center;
   text-transform: uppercase;
   letter-spacing: 0.22em;
   color: var(--light) !important;
@@ -242,17 +266,46 @@ a.cta-button {
   }
 }
 
+a.cta-button.outline {
+  color: var(--secondary) !important;
+  background: transparent;
+  border: 1px solid var(--secondary);
+
+  &:hover {
+    background: var(--highlight);
+    color: var(--secondary) !important;
+  }
+}
+
+// Button rows: text-align centering works even where flex is unavailable
+.map-actions {
+  display: flex;
+  justify-content: center;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+  text-align: center;
+  margin: 1.2rem 0 2rem 0;
+
+  a.cta-button {
+    padding: 0.62rem 1.6rem;
+    font-size: 0.78rem;
+    margin: 0.25rem;
+  }
+}
+
 // ── Homepage quick-detail row ─────────────────────────────────────────────────
 .detail-row {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 1rem;
+  text-align: center;
   margin: 2.2rem 0 1rem 0;
 
   a {
     flex: 1 1 160px;
     max-width: 200px;
+    display: inline-block;
     text-align: center;
     padding: 1.1rem 0.8rem;
     border: 1px solid var(--lightgray);
@@ -264,13 +317,203 @@ a.cta-button {
     color: var(--darkgray);
     background: transparent;
     border-bottom: 1px solid var(--lightgray);
-    transition: border-color 0.2s ease, color 0.2s ease;
+    transition:
+      border-color 0.2s ease,
+      color 0.2s ease;
 
     &:hover {
       border-color: var(--secondary);
       color: var(--secondary);
     }
   }
+}
+
+// ── Day-of timeline ───────────────────────────────────────────────────────────
+// Markup: .tl-item > p.tl-time / span.tl-dot / p.tl-title — stacks readably
+// even with no CSS at all (the dot span simply disappears).
+.timeline {
+  max-width: 26rem;
+  margin: 2rem auto;
+  padding: 0;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 9rem;
+    top: 0.6rem;
+    bottom: 0.6rem;
+    width: 1px;
+    background: var(--lightgray);
+  }
+
+  .tl-item {
+    display: grid;
+    grid-template-columns: 8rem 2rem 1fr;
+    align-items: center;
+    margin: 1.5rem 0;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  .tl-time {
+    font-family: var(--headerFont);
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--darkgray);
+    text-align: right;
+  }
+
+  .tl-dot {
+    display: block;
+    justify-self: center;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: var(--secondary);
+    border: 2px solid var(--light);
+    box-shadow: 0 0 0 1px var(--secondary);
+  }
+
+  .tl-title {
+    font-family: var(--headerFont);
+    font-style: italic;
+    font-size: 1.35rem;
+    color: var(--dark);
+    line-height: 1.2;
+    text-align: left;
+  }
+}
+
+.schedule-day {
+  text-align: center;
+  font-family: var(--headerFont);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.24em;
+  color: var(--darkgray);
+  margin: 0.4rem 0 0 0;
+}
+
+// ── Info cards ────────────────────────────────────────────────────────────────
+// Markup: .card > p.card-title / p.card-body — plain stacked blocks unstyled.
+.info-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 0.9rem;
+  text-align: center;
+  margin: 1.8rem 0;
+
+  .card {
+    border: 1px solid var(--lightgray);
+    border-radius: 8px;
+    padding: 1rem 1.1rem;
+    background: color-mix(in srgb, var(--light) 55%, #ffffff);
+    text-align: center;
+
+    p {
+      margin: 0;
+    }
+
+    .card-title {
+      font-family: var(--headerFont);
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--secondary);
+    }
+
+    .card-body {
+      font-size: 0.95rem;
+      color: var(--darkgray);
+      line-height: 1.5;
+      margin-top: 0.35rem;
+    }
+  }
+
+  a.card {
+    text-decoration: none;
+    border-bottom: 1px solid var(--lightgray);
+    transition:
+      border-color 0.2s ease,
+      transform 0.15s ease;
+
+    &:hover {
+      border-color: var(--secondary);
+      transform: translateY(-2px);
+    }
+  }
+}
+
+// ── FAQ accordion ─────────────────────────────────────────────────────────────
+.faq {
+  max-width: 38rem;
+  margin: 1.6rem auto;
+  text-align: left;
+
+  .faq-item {
+    border: 1px solid var(--lightgray);
+    border-radius: 8px;
+    background: color-mix(in srgb, var(--light) 55%, #ffffff);
+    margin: 0.7rem 0;
+    padding: 0;
+    overflow: hidden;
+
+    summary {
+      cursor: pointer;
+      list-style: none;
+      font-family: var(--headerFont);
+      font-style: italic;
+      font-size: 1.18rem;
+      color: var(--dark);
+      padding: 0.9rem 2.6rem 0.9rem 1.2rem;
+      position: relative;
+      transition: color 0.2s ease;
+
+      &::-webkit-details-marker {
+        display: none;
+      }
+
+      &::after {
+        content: "+";
+        position: absolute;
+        right: 1.1rem;
+        top: 50%;
+        transform: translateY(-50%);
+        font-style: normal;
+        font-size: 1.3rem;
+        color: var(--secondary);
+        transition: transform 0.2s ease;
+      }
+
+      &:hover {
+        color: var(--secondary);
+      }
+    }
+
+    &[open] summary::after {
+      content: "–";
+    }
+
+    > p,
+    > div {
+      padding: 0 1.2rem 1rem 1.2rem;
+      margin: 0;
+    }
+  }
+}
+
+// ── Our Story epigraph ────────────────────────────────────────────────────────
+.story-epigraph {
+  text-align: center;
+  font-style: italic;
+  font-size: 1.2rem;
+  color: var(--darkgray);
+  max-width: 30rem;
+  margin: 2.2rem auto;
 }
 
 // ── Footer ────────────────────────────────────────────────────────────────────
@@ -280,7 +523,6 @@ footer {
   padding-top: 1.6rem;
   border-top: 1px solid var(--lightgray);
 
-  // replace the Quartz attribution line with a quiet sign-off
   p {
     display: none;
   }
@@ -304,10 +546,12 @@ footer {
     gap: 0.3rem 1.6rem;
     padding: 0;
     margin: 0;
+    text-align: center;
   }
 
   li {
     margin: 0;
+    display: inline-block;
   }
 
   a {
@@ -338,223 +582,11 @@ footer {
   }
 }
 
-// ═════════════════════════════════════════════════════════════════════════════
-// Page-layout components (schedule timeline, info cards, illustrated map)
-// ═════════════════════════════════════════════════════════════════════════════
-
-// ── Day-of timeline ───────────────────────────────────────────────────────────
-.timeline {
-  max-width: 26rem;
-  margin: 2rem auto;
-  padding: 0;
-  position: relative;
-
-  &::before {
-    content: "";
-    position: absolute;
-    left: 9rem;
-    top: 0.6rem;
-    bottom: 0.6rem;
-    width: 1px;
-    background: var(--lightgray);
-  }
-
-  .tl-item {
-    display: grid;
-    grid-template-columns: 8rem 2rem 1fr;
-    align-items: baseline;
-    margin: 1.5rem 0;
-  }
-
-  .tl-time {
-    font-family: var(--headerFont);
-    font-size: 0.78rem;
-    text-transform: uppercase;
-    letter-spacing: 0.14em;
-    color: var(--darkgray);
-    text-align: right;
-  }
-
-  .tl-dot {
-    justify-self: center;
-    align-self: center;
-    width: 9px;
-    height: 9px;
-    border-radius: 50%;
-    background: var(--secondary);
-    border: 2px solid var(--light);
-    box-shadow: 0 0 0 1px var(--secondary);
-  }
-
-  .tl-body .tl-title {
-    display: block;
-    font-family: var(--headerFont);
-    font-style: italic;
-    font-size: 1.35rem;
-    color: var(--dark);
-    line-height: 1.2;
-  }
-
-  .tl-body .tl-note {
-    display: block;
-    font-size: 0.98rem;
-    font-style: italic;
-    color: var(--darkgray);
-    margin-top: 0.15rem;
-  }
-}
-
-.schedule-day {
-  text-align: center;
-  font-family: var(--headerFont);
-  font-size: 0.85rem;
-  text-transform: uppercase;
-  letter-spacing: 0.24em;
-  color: var(--darkgray);
-  margin: 0.4rem 0 0 0;
-}
-
-// ── Info cards (travel modes, lodging options) ───────────────────────────────
-.info-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
-  gap: 0.9rem;
-  margin: 1.8rem 0;
-
-  .card {
-    border: 1px solid var(--lightgray);
-    border-radius: 8px;
-    padding: 1rem 1.1rem;
-    background: color-mix(in srgb, var(--light) 55%, #ffffff);
-    text-align: center;
-
-    a {
-      border-bottom: none;
-    }
-
-    .card-title {
-      display: block;
-      font-family: var(--headerFont);
-      font-size: 0.8rem;
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
-      color: var(--secondary);
-      margin-bottom: 0.35rem;
-    }
-
-    .card-body {
-      display: block;
-      font-size: 0.95rem;
-      color: var(--darkgray);
-      line-height: 1.5;
-    }
-  }
-
-  // cards that are themselves links (e.g. travel-mode quick links)
-  a.card {
-    text-decoration: none;
-    border-bottom: 1px solid var(--lightgray);
-    transition: border-color 0.2s ease, transform 0.15s ease;
-
-    &:hover {
-      border-color: var(--secondary);
-      transform: translateY(-2px);
-    }
-  }
-}
-
-// ── Outline button variant ────────────────────────────────────────────────────
-a.cta-button.outline {
-  color: var(--secondary) !important;
-  background: transparent;
-  border: 1px solid var(--secondary);
-
-  &:hover {
-    background: var(--highlight);
-    color: var(--secondary) !important;
-  }
-}
-
-.map-actions {
-  display: flex;
-  justify-content: center;
-  gap: 0.8rem;
-  flex-wrap: wrap;
-  margin: 1.2rem 0 2rem 0;
-
-  a.cta-button {
-    padding: 0.62rem 1.6rem;
-    font-size: 0.78rem;
-  }
-}
-
-// ── Our Story epigraph ────────────────────────────────────────────────────────
-.story-epigraph {
-  text-align: center;
-  font-style: italic;
-  font-size: 1.2rem;
-  color: var(--darkgray);
-  max-width: 30rem;
-  margin: 2.2rem auto;
-}
-
 @media all and (max-width: 640px) {
   .timeline::before {
     left: 6rem;
   }
   .timeline .tl-item {
     grid-template-columns: 5rem 2rem 1fr;
-  }
-}
-
-// ── FAQ accordion ─────────────────────────────────────────────────────────────
-.faq {
-  max-width: 38rem;
-  margin: 1.6rem auto;
-
-  .faq-item {
-    border: 1px solid var(--lightgray);
-    border-radius: 8px;
-    background: color-mix(in srgb, var(--light) 55%, #ffffff);
-    margin: 0.7rem 0;
-    padding: 0;
-    overflow: hidden;
-
-    summary {
-      cursor: pointer;
-      list-style: none;
-      font-family: var(--headerFont);
-      font-style: italic;
-      font-size: 1.18rem;
-      color: var(--dark);
-      padding: 0.9rem 2.6rem 0.9rem 1.2rem;
-      position: relative;
-      transition: color 0.2s ease;
-
-      &::-webkit-details-marker { display: none; }
-
-      &::after {
-        content: "+";
-        position: absolute;
-        right: 1.1rem;
-        top: 50%;
-        transform: translateY(-50%);
-        font-style: normal;
-        font-size: 1.3rem;
-        color: var(--secondary);
-        transition: transform 0.2s ease;
-      }
-
-      &:hover { color: var(--secondary); }
-    }
-
-    &[open] summary::after {
-      content: "–";
-    }
-
-    > p, > div {
-      padding: 0 1.2rem 1rem 1.2rem;
-      margin: 0;
-    }
   }
 }

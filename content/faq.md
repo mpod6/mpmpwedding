@@ -21,35 +21,35 @@ draft: true
 <details class="faq-item">
 <summary>When should I RSVP by?</summary>
 
-*✎ Confirm the real deadline (it also appears on the [RSVP](rsvp) page) — e.g. "Please respond by ______ so we can give the venue a final count."*
+_✎ Confirm the real deadline (it also appears on the [RSVP](rsvp) page) — e.g. "Please respond by **\_\_** so we can give the venue a final count."_
 
 </details>
 
 <details class="faq-item">
 <summary>Can I bring a plus-one?</summary>
 
-✔ When you look up your name on the [RSVP](rsvp) page, your invitation will show exactly who it covers — and if it includes a guest, you'll be able to add their name and meal right there. *✎ Optionally add a warmer line about your plus-one philosophy.*
+✔ When you look up your name on the [RSVP](rsvp) page, your invitation will show exactly who it covers — and if it includes a guest, you'll be able to add their name and meal right there. _✎ Optionally add a warmer line about your plus-one philosophy._
 
 </details>
 
 <details class="faq-item">
 <summary>Are kids welcome?</summary>
 
-*✎ Whichever way you've decided, say it kindly and unambiguously — e.g. "We love your little ones, but this will be an adults-only evening" or "Children of family are warmly invited."*
+_✎ Whichever way you've decided, say it kindly and unambiguously — e.g. "We love your little ones, but this will be an adults-only evening" or "Children of family are warmly invited."_
 
 </details>
 
 <details class="faq-item">
 <summary>What should I wear?</summary>
 
-*✎ One sentence naming the dress code, then link it:* see the [dress code](dresscode) page for the full rundown.
+_✎ One sentence naming the dress code, then link it:_ see the [dress code](dresscode) page for the full rundown.
 
 </details>
 
 <details class="faq-item">
 <summary>What if it rains?</summary>
 
-*✎ Note the weather plan — is there an indoor backup at the venue? Guests genuinely worry about this one.*
+_✎ Note the weather plan — is there an indoor backup at the venue? Guests genuinely worry about this one._
 
 </details>
 
@@ -63,28 +63,28 @@ draft: true
 <details class="faq-item">
 <summary>Is there a hotel block?</summary>
 
-✔ We expect to reserve a block at the Hilton Garden Inn Stony Brook — the group rate and booking link will be posted on the [where to stay](lodging) page as soon as it's confirmed. *✎ Update this once the block is booked.*
+✔ We expect to reserve a block at the Hilton Garden Inn Stony Brook — the group rate and booking link will be posted on the [where to stay](lodging) page as soon as it's confirmed. _✎ Update this once the block is booked._
 
 </details>
 
 <details class="faq-item">
 <summary>Will there be a shuttle?</summary>
 
-*✎ Yes/no, and if yes: from where, and at what times.*
+_✎ Yes/no, and if yes: from where, and at what times._
 
 </details>
 
 <details class="faq-item">
 <summary>What time should I arrive?</summary>
 
-*✎ Suggested wording: "The ceremony begins at 5:30 pm sharp — please plan to be seated by 5:15." Adjust to taste.*
+_✎ Suggested wording: "The ceremony begins at 5:30 pm sharp — please plan to be seated by 5:15." Adjust to taste._
 
 </details>
 
 <details class="faq-item">
 <summary>Can I take photos during the ceremony?</summary>
 
-*✎ State your preference — unplugged ceremony, or snap away? e.g. "We're having an unplugged ceremony — our photographer will catch everything, so we'd love your eyes, not your phones. The reception is fair game."*
+_✎ State your preference — unplugged ceremony, or snap away? e.g. "We're having an unplugged ceremony — our photographer will catch everything, so we'd love your eyes, not your phones. The reception is fair game."_
 
 </details>
 
@@ -105,21 +105,21 @@ draft: true
 <details class="faq-item">
 <summary>Where are you registered?</summary>
 
-*✎ One line pointing to the [registry](registry) page once it's live.*
+_✎ One line pointing to the [registry](registry) page once it's live._
 
 </details>
 
 <details class="faq-item">
 <summary>Is the venue accessible?</summary>
 
-*✎ Confirm with the venue and note anything guests with limited mobility should know — entrances, restrooms, terrain between spaces.*
+_✎ Confirm with the venue and note anything guests with limited mobility should know — entrances, restrooms, terrain between spaces._
 
 </details>
 
 <details class="faq-item">
 <summary>I have a question that isn't answered here</summary>
 
-*✎ Give guests a way to reach you — an email address (a shared wedding inbox works nicely) or whose phone to text.*
+_✎ Give guests a way to reach you — an email address (a shared wedding inbox works nicely) or whose phone to text._
 
 </details>
 

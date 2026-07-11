@@ -22,7 +22,8 @@ export default async (req) => {
 
   const store = weddingStore()
   const list = await loadGuestList(store)
-  if (!list) return json({ error: "The guest list isn't loaded yet — please check back soon." }, 503)
+  if (!list)
+    return json({ error: "The guest list isn't loaded yet — please check back soon." }, 503)
 
   const party = findPartyByName(list, name)
   if (!party) {

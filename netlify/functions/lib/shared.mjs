@@ -89,7 +89,9 @@ export function validateSubmission(body, party) {
     const attending = r.attending === true
     let meal = null
     if (attending) {
-      meal = String(r.meal || "").slice(0, MAX.meal).trim()
+      meal = String(r.meal || "")
+        .slice(0, MAX.meal)
+        .trim()
       if (!meal) errors.push(`Please choose a meal for ${memberName}.`)
     }
     return { name: memberName, attending, meal }
@@ -101,8 +103,12 @@ export function validateSubmission(body, party) {
     if (allowedPlusOnes < 1) {
       errors.push("This invitation does not include an additional guest.")
     } else {
-      const gname = String(body.plusOne.name || "").slice(0, MAX.name).trim()
-      const gmeal = String(body.plusOne.meal || "").slice(0, MAX.meal).trim()
+      const gname = String(body.plusOne.name || "")
+        .slice(0, MAX.name)
+        .trim()
+      const gmeal = String(body.plusOne.meal || "")
+        .slice(0, MAX.meal)
+        .trim()
       if (!gname) errors.push("Please tell us your guest's name.")
       if (!gmeal) errors.push("Please choose a meal for your guest.")
       clean.plusOne = { bringing: true, name: gname, meal: gmeal }
@@ -115,8 +121,12 @@ export function validateSubmission(body, party) {
     errors.push("A guest can only join if someone on the invitation is attending.")
   }
 
-  clean.allergies = String(body?.allergies || "").slice(0, MAX.allergies).trim()
-  clean.song = String(body?.song || "").slice(0, MAX.song).trim()
+  clean.allergies = String(body?.allergies || "")
+    .slice(0, MAX.allergies)
+    .trim()
+  clean.song = String(body?.song || "")
+    .slice(0, MAX.song)
+    .trim()
 
   return { errors, clean }
 }
@@ -128,7 +138,8 @@ export function checkAdminToken(req) {
   const header = req.headers.get("authorization") || ""
   const bearer = header.startsWith("Bearer ") ? header.slice(7) : null
   const supplied = bearer || new URL(req.url).searchParams.get("token")
-  if (!supplied || supplied !== configured) return { ok: false, reason: "Invalid or missing token." }
+  if (!supplied || supplied !== configured)
+    return { ok: false, reason: "Invalid or missing token." }
   return { ok: true }
 }
 

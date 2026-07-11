@@ -58,17 +58,29 @@ export default async (req, context) => {
     const list = await loadGuestList(store)
     if (!list) return json({ error: "No guest list uploaded yet." }, 404)
     const rows = [
-      ["party", "guest", "is_plus_one", "responded", "attending", "meal", "allergies", "song", "last_updated"],
+      [
+        "party",
+        "guest",
+        "is_plus_one",
+        "responded",
+        "attending",
+        "meal",
+        "allergies",
+        "song",
+        "last_updated",
+      ],
     ]
     for (const { party, response } of await allResponses(store, list)) {
       if (!response) {
-        for (const m of party.members)
-          rows.push([party.party, m, "no", "no", "", "", "", "", ""])
+        for (const m of party.members) rows.push([party.party, m, "no", "no", "", "", "", "", ""])
         continue
       }
       for (const r of response.responses) {
         rows.push([
-          party.party, r.name, "no", "yes",
+          party.party,
+          r.name,
+          "no",
+          "yes",
           r.attending ? "yes" : "no",
           r.meal || "",
           response.allergies || "",
@@ -78,7 +90,11 @@ export default async (req, context) => {
       }
       if (response.plusOne?.bringing) {
         rows.push([
-          party.party, response.plusOne.name, "yes", "yes", "yes",
+          party.party,
+          response.plusOne.name,
+          "yes",
+          "yes",
+          "yes",
           response.plusOne.meal || "",
           response.allergies || "",
           response.song || "",
@@ -100,7 +116,10 @@ export default async (req, context) => {
   if (action === "status" && req.method === "GET") {
     const list = await loadGuestList(store)
     if (!list) return json({ error: "No guest list uploaded yet." }, 404)
-    let responded = 0, attending = 0, declined = 0, plusOnes = 0
+    let responded = 0,
+      attending = 0,
+      declined = 0,
+      plusOnes = 0
     const meals = {}
     for (const { response } of await allResponses(store, list)) {
       if (!response) continue
@@ -114,7 +133,8 @@ export default async (req, context) => {
       if (response.plusOne?.bringing) {
         attending++
         plusOnes++
-        if (response.plusOne.meal) meals[response.plusOne.meal] = (meals[response.plusOne.meal] || 0) + 1
+        if (response.plusOne.meal)
+          meals[response.plusOne.meal] = (meals[response.plusOne.meal] || 0) + 1
       }
     }
     return json({
@@ -127,7 +147,8 @@ export default async (req, context) => {
   // ── Delete a single response (e.g. to let a party redo from scratch) ───────
   if (req.method === "DELETE" && action === "response") {
     const id = context.params?.id
-    if (!id) return json({ error: "Specify the party id: DELETE /api/rsvp-admin/response/<partyId>" }, 400)
+    if (!id)
+      return json({ error: "Specify the party id: DELETE /api/rsvp-admin/response/<partyId>" }, 400)
     await store.delete(`rsvp/${id}`)
     return json({ ok: true, deleted: id })
   }

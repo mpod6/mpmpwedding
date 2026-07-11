@@ -8,12 +8,10 @@ description: August 28, 2027 · The Estate at Three Village Inn · Stony Brook, 
   <p class="hero-eyebrow">The Wedding of</p>
   <h1 class="hero-names">Marisa <span class="amp">&amp;</span> Max</h1>
   <p class="hero-invite">joyfully invite you to celebrate with them</p>
-  <div class="hero-date-block">
-    <span class="hero-date">Saturday, August 28, 2027</span>
-    <span class="hero-time">half past five in the evening</span>
-  </div>
+  <p class="hero-date">Saturday, August 28, 2027</p>
+  <p class="hero-time">half past five in the evening</p>
   <p class="hero-venue">The Estate at Three Village Inn<br />150 Main Street · Stony Brook, New York</p>
-  <a class="cta-button" href="rsvp">RSVP</a>
+  <p class="hero-cta"><a class="cta-button" href="rsvp">RSVP</a></p>
 </div>
 
 ---

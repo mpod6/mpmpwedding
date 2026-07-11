@@ -7,13 +7,7 @@
 // }
 // → 200 { ok, updated } | 400 validation | 403 closed | 404 unknown party
 
-import {
-  weddingStore,
-  loadGuestList,
-  validateSubmission,
-  rsvpClosed,
-  json,
-} from "./lib/shared.mjs"
+import { weddingStore, loadGuestList, validateSubmission, rsvpClosed, json } from "./lib/shared.mjs"
 
 export default async (req) => {
   if (req.method !== "POST") return json({ error: "Method not allowed." }, 405)
@@ -30,7 +24,8 @@ export default async (req) => {
 
   const store = weddingStore()
   const list = await loadGuestList(store)
-  if (!list) return json({ error: "The guest list isn't loaded yet — please check back soon." }, 503)
+  if (!list)
+    return json({ error: "The guest list isn't loaded yet — please check back soon." }, 503)
 
   const party = list.find((p) => p.party === String(body?.party || ""))
   if (!party) return json({ error: "We couldn't find that invitation." }, 404)
