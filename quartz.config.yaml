@@ -24,22 +24,22 @@ configuration:
         light: "#f7f3e8" # page bg — soft ivory (Vinery paper)
         lightgray: "#e0d9c4" # borders — warm stone (venue greige)
         gray: "#a89f83" # muted details, small caps accents
-        darkgray: "#45483c" # body text — warm deep olive-charcoal
-        dark: "#2e3527" # headers — deep forest charcoal
-        secondary: "#5f7247" # links & accents — olive sage vine
-        tertiary: "#7d8f58" # hover — lighter moss
+        darkgray: "#483f3c" # body text — warm deep brown
+        dark: "#2c2725" # headers — deep forest charcoal
+        secondary: "#4f0a07" # links & accents — RED
+        tertiary: "#7e100b" # hover — LIGHTER RED
         highlight: "rgba(125, 143, 88, 0.12)" # internal link bg
-        textHighlight: "rgba(196, 181, 110, 0.35)" # ==markdown highlight== bg
+        textHighlight: "rgba(231, 163, 144, 0.88)" # ==markdown highlight== bg
       darkMode: # intentionally identical — one consistent stationery look
-        light: "#f7f3e8"
-        lightgray: "#e0d9c4"
-        gray: "#a89f83"
-        darkgray: "#45483c"
-        dark: "#2e3527"
-        secondary: "#5f7247"
-        tertiary: "#7d8f58"
-        highlight: "rgba(125, 143, 88, 0.12)"
-        textHighlight: "rgba(196, 181, 110, 0.35)"
+        light: "#f7f3e8" # page bg — soft ivory (Vinery paper)
+        lightgray: "#e0d9c4" # borders — warm stone (venue greige)
+        gray: "#a89f83" # muted details, small caps accents
+        darkgray: "#483f3c" # body text — warm deep brown
+        dark: "#2c2725" # headers — deep forest charcoal
+        secondary: "#4f0a07" # links & accents — RED
+        tertiary: "#7e100b" # hover — LIGHTER RED
+        highlight: "rgba(125, 143, 88, 0.12)" # internal link bg
+        textHighlight: "rgba(231, 163, 144, 0.88)" # ==markdown highlight== bg
 plugins:
   - source: github:quartz-community/created-modified-date
     enabled: true
