@@ -3,7 +3,11 @@ title: Travel
 description: Local and Out of State travel advice
 ---
 
-<p style="text-align:center;">Our wedding will be hosted at The Estate at Three Village Inn · 150 Main Street, Stony Brook, NY 11790 </p>
+<div style="text-align: center;">
+  <img src="./assets/venue.jpeg" alt="Exterior of the Three Village Inn at Stony Brook" style="display: block; margin: 0 auto;">
+</div>
+
+<p style="text-align:center;"> Our wedding will be hosted at The Estate at Three Village Inn · 150 Main Street, Stony Brook, NY 11790 </p>
 
 <div class="map-actions">
   <a class="cta-button" href="https://www.google.com/maps/search/?api=1&query=Three+Village+Inn+150+Main+St+Stony+Brook+NY+11790" target="_blank" rel="noopener">Google Maps</a>
