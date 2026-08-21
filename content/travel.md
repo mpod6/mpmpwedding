@@ -4,7 +4,7 @@ description: Local and Out of State travel advice
 ---
 
 <div style="text-align: center;">
-  <img src="./assets/venue.jpeg" alt="Exterior of the Three Village Inn at Stony Brook" style="display: block; margin: 0 auto;">
+  <img src="./assets/venue.jpeg" alt="Exterior of the Three Village Inn at Stony Brook" style="width: 1000px; display: block; margin: 0 auto;">
 </div>
 
 <p style="text-align:center;"> Our wedding will be hosted at The Estate at Three Village Inn · 150 Main Street, Stony Brook, NY 11790 </p>
