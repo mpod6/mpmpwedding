@@ -5,9 +5,13 @@ title: Lodging
 ## Hotel Blocks
 
 > [!info]
-> We expect to be reserving a block at the Stony Brook Hilton Garden Inn. There are not many major hotel chains in the nearby area. There are some local hotels and inns available as alternatives.
-
+> We expect to be reserving a block at the [Stony Brook Hilton Garden Inn](https://www.hilton.com/en/hotels/ispsbgi-hilton-garden-inn-stony-brook/). 
 ---
+
+Other nearby hotel options include:
+* [Hyatt Regency Long Island](https://www.hyatt.com/hyatt-regency/en-US/haupp-hyatt-regency-long-island)
+* [Holiday Inn Express Stony Brook-Long Island](https://www.ihg.com/holidayinnexpress/hotels/us/en/centereach/stony/hoteldetail)
+* [Danfords Hotel, Marina, and Spa](https://www.danfords.com/)
 
 ## Airbnb/Vrbo
 
