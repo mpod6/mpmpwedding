@@ -11,4 +11,4 @@ title: Lodging
 
 ## Airbnb/Vrbo
 
-Several towns in the area have banned or severely restricted short-term rentals so you may have difficulty finding options that are nearby. We would recommend looking near Farmingville, Selden, Coram, Port Jefferson, and Miller Place so that you are within 30 minutes.
+Several towns in the area have banned or severely restricted short-term rentals so you may have difficulty finding options that are nearby. We would recommend looking near Farmingville, Selden, Coram, Port Jefferson, and Miller Place so that you are within 30 minutes of the venue. 
