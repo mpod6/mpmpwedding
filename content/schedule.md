@@ -22,7 +22,7 @@ desc: Day-of Schedule
     <p class="tl-title">Reception</p>
   </div>
   <div class="tl-item">
-    <p class="tl-time">11:00 pm – 1:00 am</p>
+    <p class="tl-time">11:00 pm – 12:30 am</p>
     <span class="tl-dot"></span>
     <p class="tl-title">Afterparty</p>
   </div>
