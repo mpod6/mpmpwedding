@@ -26,18 +26,18 @@ configuration:
         gray: "#a89f83" # muted details, small caps accents
         darkgray: "#483f3c" # body text — warm deep brown
         dark: "#2c2725" # headers — deep forest charcoal
-        secondary: "#4f0a07" # links & accents — RED
-        tertiary: "#7e100b" # hover — LIGHTER RED
+        secondary: "#7e100b" # links & accents — LIGHTER RED
+        tertiary: "#4f0a07" # hover — DARK RED
         highlight: "rgba(125, 143, 88, 0.12)" # internal link bg
-        textHighlight: "rgba(231, 163, 144, 0.88)" # ==markdown highlight== bg
+        textHighlight: "rgba(196, 181, 110, 0.35)" # ==markdown highlight== bg
       darkMode: # intentionally identical — one consistent stationery look
         light: "#f7f3e8" # page bg — soft ivory (Vinery paper)
         lightgray: "#e0d9c4" # borders — warm stone (venue greige)
         gray: "#a89f83" # muted details, small caps accents
         darkgray: "#483f3c" # body text — warm deep brown
         dark: "#2c2725" # headers — deep forest charcoal
-        secondary: "#4f0a07" # links & accents — RED
-        tertiary: "#7e100b" # hover — LIGHTER RED
+        secondary: "#7e100b" # links & accents — LIGHTER RED
+        tertiary: "#4f0a07" # hover — DARK RED
         highlight: "rgba(125, 143, 88, 0.12)" # internal link bg
         textHighlight: "rgba(231, 163, 144, 0.88)" # ==markdown highlight== bg
 plugins:
