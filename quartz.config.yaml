@@ -28,7 +28,7 @@ configuration:
         dark: "#2c2725" # headers — deep forest charcoal
         secondary: "#7e100b" # links & accents — LIGHTER RED
         tertiary: "#4f0a07" # hover — DARK RED
-        highlight: "rgba(125, 143, 88, 0.12)" # internal link bg
+        highlight: "rgba(196, 181, 110, 0.35)" # internal link bg
         textHighlight: "rgba(196, 181, 110, 0.35)" # ==markdown highlight== bg
       darkMode: # intentionally identical — one consistent stationery look
         light: "#f7f3e8" # page bg — soft ivory (Vinery paper)
@@ -39,7 +39,7 @@ configuration:
         secondary: "#7e100b" # links & accents — LIGHTER RED
         tertiary: "#4f0a07" # hover — DARK RED
         highlight: "rgba(125, 143, 88, 0.12)" # internal link bg
-        textHighlight: "rgba(231, 163, 144, 0.88)" # ==markdown highlight== bg
+        textHighlight: "rgba(196, 181, 110, 0.35)" # ==markdown highlight== bg
 plugins:
   - source: github:quartz-community/created-modified-date
     enabled: true
