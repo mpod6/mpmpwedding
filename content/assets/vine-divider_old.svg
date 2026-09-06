@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 36" width="360" height="36" fill="none" aria-hidden="true">
+  <!-- left trailing stem -->
+  <path d="M20 18 C 60 14, 100 22, 150 18" stroke="#5f7247" stroke-width="1.4" stroke-linecap="round"/>
+  <!-- right trailing stem -->
+  <path d="M340 18 C 300 22, 260 14, 210 18" stroke="#5f7247" stroke-width="1.4" stroke-linecap="round"/>
+  <!-- left leaves -->
+  <path d="M52 16.5 C 47 8, 56 5, 60 12 C 58 16, 54 17, 52 16.5 Z" fill="#7d8f58"/>
+  <path d="M84 20 C 82 28, 91 30, 93 23 C 91 19, 86 18.5, 84 20 Z" fill="#5f7247"/>
+  <path d="M118 16.8 C 114 9, 123 6, 126 13 C 124 17, 120 17.6, 118 16.8 Z" fill="#8a9a63"/>
+  <!-- right leaves -->
+  <path d="M308 19.5 C 313 28, 304 31, 300 24 C 302 20, 306 19, 308 19.5 Z" fill="#7d8f58"/>
+  <path d="M276 16 C 278 8, 269 6, 267 13 C 269 17, 274 17.5, 276 16 Z" fill="#5f7247"/>
+  <path d="M242 19.2 C 246 27, 237 30, 234 23 C 236 19, 240 18.4, 242 19.2 Z" fill="#8a9a63"/>
+  <!-- small buds along stems -->
+  <circle cx="68" cy="17.6" r="1.6" fill="#a89f83"/>
+  <circle cx="102" cy="19.4" r="1.4" fill="#a89f83"/>
+  <circle cx="292" cy="18.4" r="1.6" fill="#a89f83"/>
+  <circle cx="258" cy="16.8" r="1.4" fill="#a89f83"/>
+  <!-- center ornament: five-petal bloom flanked by paired leaves -->
+  <path d="M168 18 C 160 12, 152 16, 156 22 C 160 25, 166 22, 168 18 Z" fill="#7d8f58"/>
+  <path d="M192 18 C 200 12, 208 16, 204 22 C 200 25, 194 22, 192 18 Z" fill="#7d8f58"/>
+  <g transform="translate(180 18)">
+    <ellipse rx="3.1" ry="5.2" transform="rotate(0)" fill="#c4b56e" opacity="0.9"/>
+    <ellipse rx="3.1" ry="5.2" transform="rotate(72)" fill="#c4b56e" opacity="0.9"/>
+    <ellipse rx="3.1" ry="5.2" transform="rotate(144)" fill="#c4b56e" opacity="0.9"/>
+    <ellipse rx="3.1" ry="5.2" transform="rotate(216)" fill="#c4b56e" opacity="0.9"/>
+    <ellipse rx="3.1" ry="5.2" transform="rotate(288)" fill="#c4b56e" opacity="0.9"/>
+    <circle r="2" fill="#5f7247"/>
+  </g>
+</svg>
