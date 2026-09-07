@@ -20,3 +20,6 @@ The Port Jefferson train station is one stop away from Stony Brook, but is unfor
 
 ---
 
+## Further East
+
+If you're *really* looking to make a trip out of this wedding, consider visiting either the northern or southern forks of Long Island! The southern fork is home to the famous Hamptons. Some other renowned tourist attractions include the [Montauk Point Lighthouse and Museum](https://maps.app.goo.gl/MiCp4wTZrkpcLRhB7) and the [Pollock-Krasner House and Study Center](https://www.pkhouse.org/en/home). The northern fork is home to the [Long Island Aquarium](https://www.longislandaquarium.com/), many wineries, and the Cross Sound Ferry which can take you to New London, Connecticut. Both areas are known for their seafood, beach-side nature walks, and produce stands along highways! 
